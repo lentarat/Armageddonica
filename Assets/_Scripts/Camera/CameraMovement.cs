@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-public class CameraController : MonoBehaviour
+public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private float _velocityMultiplier;
     [SerializeField] private float _acceleration;
