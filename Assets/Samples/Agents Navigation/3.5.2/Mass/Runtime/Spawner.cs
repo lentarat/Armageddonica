@@ -7,6 +7,8 @@ namespace ProjectDawn.Navigation.Sample.Mass
 {
     public class Spawner : MonoBehaviour
     {
+        [SerializeField] private Transform _entitiesHolder;
+
         public GameObject Prefab;
         public float Interval = 1;
         public float3 Size = new float3(1, 0, 1);
@@ -28,7 +30,7 @@ namespace ProjectDawn.Navigation.Sample.Mass
             {
                 float3 offset = m_Random.NextFloat3(-Size, Size);
                 float3 position = (float3) transform.position + offset;
-                GameObject unit = GameObject.Instantiate(Prefab, position, Quaternion.identity);
+                GameObject unit = GameObject.Instantiate(Prefab, position, Quaternion.identity, _entitiesHolder);
                 if (Destination != null)
                 {
                     var agent = unit.GetComponent<AgentAuthoring>();

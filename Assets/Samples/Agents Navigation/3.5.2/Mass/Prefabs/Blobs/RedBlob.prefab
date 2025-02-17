@@ -15,7 +15,9 @@ GameObject:
   - component: {fileID: -3956735032111250296}
   - component: {fileID: -6211448534593624900}
   - component: {fileID: 5484018372935077708}
-  m_Layer: 0
+  - component: {fileID: -2144640607659991770}
+  - component: {fileID: 4913511139434470805}
+  m_Layer: 7
   m_Name: RedBlob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +137,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedd2724c98398d41a57ec1b8ad6ea28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _entityLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
   _entityType: 1
+--- !u!114 &-2144640607659991770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6010206441563009151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73642b37698bf0748b191e07901f19d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entitySeeker: {fileID: 4913511139434470805}
+  _agentAuthoring: {fileID: 1375825542994981280}
+  _changeFollowedEntityPeriod: 200
+--- !u!114 &4913511139434470805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6010206441563009151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cca60e1d8fa27cd4887d36b03ade231b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _searcherEntity: {fileID: 5484018372935077708}
+  _lookForNewClosestEntityPeriod: 200
 --- !u!1 &6830697395298807692
 GameObject:
   m_ObjectHideFlags: 0
